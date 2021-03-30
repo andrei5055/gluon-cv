@@ -35,6 +35,8 @@ def parse_args():
                         help='data type for training. default is float32')
     parser.add_argument('--num-gpus', type=int, default=0,
                         help='number of gpus to use.')
+    parser.add_argument("-a", "--use_all_gpus", action="store_true", default=False,
+                           help="use all available gpus")
     parser.add_argument('-j', '--num-data-workers', dest='num_workers', default=4, type=int,
                         help='number of preprocessing workers')
     parser.add_argument('--num-epochs', type=int, default=3,
